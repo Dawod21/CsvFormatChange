@@ -1,0 +1,22 @@
+<!-- <div *ngFor="let covid of covidData">
+    <p> {{ covid }}</p>
+    </div> -->
+    <div class="container">
+        <h1 class="mt-4">File upload</h1>
+       
+        <input class="form-control mb-5" type="file" class="upload" (change)="changeFileFormat($event.target.files)">
+     
+        <table class="table table-bordered  mt-5">
+          <thead>
+            <tr>
+              <th *ngFor="let item of lines[0]; let i = index">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of linesR[0]; let i = index">
+              <td *ngFor="let itemm of lines[0]; let j = index">{{item[j]}}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
